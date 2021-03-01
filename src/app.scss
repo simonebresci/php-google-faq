@@ -1,0 +1,385 @@
+@import "common";
+@import "colors";
+
+
+// FARE REFACTORING INSERENDO RESET MARGINI E PADDING PAGINA
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  font-size: 40px;
+  font-weight: bold;
+  color: $colorBlack1;
+}
+
+h3{
+  font-weight: normal;
+  color: $colorDarkGrey1;
+}
+
+
+
+// HEADER TOP*******************************************************************
+
+#root{
+  @include background-common;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header-top-background{
+  @include background-common;
+  background-color: black;
+  height: 40px;
+}
+
+
+.header-top{
+  display: flex;
+  justify-content: flex-end;
+
+  @include content-style;
+  &-menu{
+    @include menu-inline-ul-light-style-1;
+    font-size: 14px;
+  }
+
+  &-menu li:hover{
+    @include hover-standard-style1;
+  }
+}
+// /HEADER TOP******************************************************************
+
+// HEADER BOTTOM****************************************************************
+.header-bottom-background{
+  @include background-common;
+  background-color: black;
+  height: 70px;
+}
+
+.header-bottom{
+  display: flex;
+  justify-content: center;
+
+  @include content-style;
+  &-menu{
+    @include menu-inline-ul-light-style-2;
+    font-size: 14px;
+
+    li{
+      margin-right: 40px;
+
+      // MEDIA QUERY - LG
+      @media screen and (max-width: 1140px) {
+        margin-right: 15px;
+      }
+      // /MEDIA QUERY - LG
+    }
+    img{
+      position: relative;
+      top: 5px;
+      width: 100px;
+
+    }
+  }
+
+  &-menu li:hover{
+    @include hover-standard-style1;
+  }
+}
+// /HEADER BOTTOM***************************************************************
+
+// JUMBOTRON****************************************************************
+.jumbotron-background{
+  @include background-common;
+  height: 460px;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: -150px;
+  background-image: url('../img/hero-pe-8.jpg');
+
+  // MEDIA QUERY - LG
+  @media screen and (max-width: 1140px) {
+    background-position: -250px;
+  }
+}
+
+.jumbotron{
+  @include content-style;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  &-col-left, &-col-center, &-col-right{
+    width: calc(100% / 3);
+
+    // MEDIA QUERY - LG
+    @media screen and (max-width: 1140px) {
+      width: calc(100% / 2);
+    }
+  }
+
+  &-col-left{
+    display: block;
+
+    // MEDIA QUERY - LG
+    @media screen and (max-width: 1140px) {
+      display: none;
+    }
+    // /MEDIA QUERY - LG
+  }
+
+  &-col-center{
+    .product-name{
+      font-size: 26px;
+      margin-top: 50px;
+      margin-bottom: 15px;
+
+      .new{
+
+        font-weight: bold;
+        font-style: italic;
+        color: $colorViolet1;
+      }
+
+    }
+
+    .product-description{
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    .product-features{
+      @include menu-ul-grey-style-1;
+      font-size: 18px;
+      margin-bottom: 30px;
+
+      i{
+        margin-right: 5px;
+      }
+
+      li{
+        margin-bottom: 20px;
+      }
+
+
+    }
+
+    .button-download{
+      @include btn-download-style1;
+    }
+
+    .button-download:hover{
+      @include hover-standard-style1;
+    }
+
+  }
+
+  &-col-right{
+    display: flex;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+
+    .list-buy{
+      @include menu-ul-grey-style-1;
+      width: 75%;
+      margin-top: 50px;
+      li{
+        margin-bottom: 15px;
+      }
+
+      li.list-buy-price{
+        color: $colorWhite1;
+        font-size:24px;
+      }
+
+      li.list-buy-download{
+        color: $colorGrey1;
+        font-size:18px;
+      }
+
+      li.list-buy-now{
+        @include btn-category;
+        font-size:18px;
+        color: white;
+      }
+
+      li.list-buy-now:hover{
+        @include hover-standard-style1;
+
+      }
+    }
+
+    .money-back{
+      width: 25%;
+      margin-right: 15px;
+      margin-top: 15px;
+      img{
+        width: 100px;
+      }
+    }
+
+  }
+}
+// /JUMBOTRON*******************************************************************
+
+// OVERVIEW ********************************************************************
+.overview-background{
+  @include background-common;
+  background-color: $colorBgGrey1;
+
+}
+
+.overview{
+  @include content-style;
+  display: flex;
+  justify-content: center;
+
+  &-menu{
+    @include menu-ul-grey-style-1;
+    font-size: 18px;
+    li{
+      display: inline-block;
+      margin-right: 45px;
+    }
+  }
+
+  &-menu li:hover{
+    @include hover-standard-style1;
+  }
+}
+// /JUMBOTRON*******************************************************************
+
+// ROW-1 ********************************************************************
+.row-1-background{
+  @include background-common;
+
+}
+
+.row-1{
+  @include content-style;
+  text-align: center;
+  margin-top: 100px;
+  img{
+    width: 100%;
+    border: 2px solid violet;
+  }
+
+
+
+}
+// /ROW-1 *******************************************************************
+
+
+// ROW-2 ********************************************************************
+.row-2-background{
+  @include background-common;
+  height: 660px;
+  background-image: url('../img/intro-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .row-2{
+    @include content-style;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // MEDIA QUERY - LG
+    @media screen and (max-width: 1140px) {
+      background-size: cover;
+
+    }
+    // /MEDIA QUERY - LG
+
+
+    .play{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.5);
+
+      i{
+        color: $colorViolet1;
+
+      }
+      i:hover{
+        @include hover-standard-style1;
+        text-decoration: none;
+      }
+
+      // MEDIA QUERY - LG
+      @media screen and (max-width: 1140px) {
+        width: 120px;
+        height: 120px;
+
+        i{
+         transform: scale(0.5);
+        }
+
+      }
+      // /MEDIA QUERY - LG
+    }
+
+    img{
+      width: 100%;
+
+    }
+  }
+}
+
+
+// ROW-2 ********************************************************************
+
+// ROW-3 ********************************************************************
+.row-3-background{
+  @include background-common;
+
+}
+
+.row-3{
+  @include content-style;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/flow-icons-bg.png");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+
+  .col-left, .col-center, .col-right{
+    display: inline-block;
+    width: 350px;
+    // border: 1px solid black;
+    text-align: center;
+
+    // MEDIA QUERY - LG
+    @media screen and (max-width: 1140px) {
+      width: 400px;
+    }
+    // /MEDIA QUERY - LG
+
+    img{
+      width: 200px;
+
+    }
+
+  }
+
+}
+// ROW-3 ********************************************************************
