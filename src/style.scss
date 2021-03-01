@@ -3,78 +3,68 @@
 
 
 *{
-  // box-sizing: border-box;
-  // margin: 0;
-  // padding: 0;
-  background-color: red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 
+
+.container{
+  .content{
+    @include content-style;
+    margin-top: 95px;
+  }
+}
+
 /* MENU INLINE STILE 1 ***********************/
-// .menu-inline-1, .menu-inline-1 li{
-//   display: inline-block;
-//   list-style: none;
-//   text-decoration: none;
-//   font-weight: bold;
-// }
-// .menu-inline-1 li{
-//   margin-right: 20px;
-//   color: white;
-//   transition: color 0.1s, text-shadow 0.5s;
-// }
-// .menu-inline-1 li:hover{
-//   cursor: pointer;
-//   color: red;
-//   text-shadow: 2px 2px 10px rgba(255,0,0,0.5);
-// }
+.menu-inline-1{
+  @include menu-inline-1;
+}
+
+.menu-inline-1 li:hover{
+  @include hover-standard-style3
+}
 /* /MENU INLINE STILE 1 ***********************/
 
 /* MAIN TOP *******************************************************************/
 
-// .main-top{
-//   position: fixed;
-//   display: flex;
-//   top:0;
-//   left: 0px;
-//   width: 100%;
-//   min-width: 1200px;
-//   height: 50px;
-//   justify-content: space-between;
-//   align-items: center;
-//   background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 100%);
-//   z-index: 100;
-//   padding: 20px 60px;
-// }
-//
-// .main-menu .logo{
-//   display: inline-block;
-//   cursor: pointer;
-// }
-// .main-menu .logo img{
-//   height: 30px;
-//   vertical-align: middle;
-//   margin-right: 20px;
-// }
-//
-// .action-menu .search-bar{
-//   min-width: 200px;
-//   width: 100px;
-//   background-color: black;
-//   color: white;
-//   border-radius: 5px;
-//   transition: width 0.4s;
-// }
-//
-//
-// .action-menu .search-bar:hover{
-//   width: 250px;
-// }
-//
-// .action-menu .menu-inline-1 li:last-child{
-//   margin-right: 0px;
-// }
+.main-top{
+  position: fixed;
+  display: flex;
+  top:0;
+  left: 0px;
+  width: 100%;
+  min-width: 1200px;
+  height: 95px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid $colorGrey1;
+}
 
+.main-menu {
+  .logoPageName{
+    display: block;
+    color: $colorDarkGrey1;
+    font-size: 22px;
+    // font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0px;
 
+    img{
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 5px;
+
+    }
+  }
+}
 
 /* /MAIN TOP *******************************************************************/
 

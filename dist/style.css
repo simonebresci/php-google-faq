@@ -1,8 +1,72 @@
 * {
-  background-color: red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container .content {
+  max-width: 1400px;
+  min-width: 1139px;
+  margin: 0 auto;
+  margin-top: 95px;
 }
 
 /* MENU INLINE STILE 1 ***********************/
+.menu-inline-1 {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu-inline-1 li {
+  display: inline-block;
+  margin-right: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5d5d5d;
+  transition: color 0.1s, text-shadow 0.5s, border 0.2s;
+  padding: 11px 0px;
+  border: 3px solid rgba(255, 255, 255, 0);
+}
+
+.menu-inline-1 li:hover {
+  cursor: pointer;
+  color: #3367d6;
+  border-bottom-color: #3367d6;
+}
+
 /* /MENU INLINE STILE 1 ***********************/
 /* MAIN TOP *******************************************************************/
+.main-top {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  min-width: 1200px;
+  height: 95px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.main-menu .logoPageName {
+  display: block;
+  color: #5d5d5d;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+.main-menu .logoPageName img {
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 /* /MAIN TOP *******************************************************************/

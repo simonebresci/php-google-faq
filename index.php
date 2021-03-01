@@ -10,8 +10,7 @@ per ricreare la grafica della pagina. -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="./dist/app.css"> -->
-    <!-- <link rel="stylesheet" href="./dist/app_copiato.css"> -->
+    <!-- <link rel="stylesheet" href="dist/app.css"> -->
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <title>Google Faq</title>
@@ -122,21 +121,52 @@ per ricreare la grafica della pagina. -->
   <!-- /PHP DATA -->
   <body>
 
-     <!-- PHP FAQ FROM DB -->
-    <?php
+    <div class="container">
 
-      foreach($faq as $qa){
-        foreach($qa as $key => $value){
-          if($key === 'question'){
-            echo "<b>" . $value . "</b> <br> <br>";
-          }else{
-            echo "<p>" . $value . "</p> <br> <br>";
+      <div class="main-top">
+
+            <!-- MAIN MENU********************** -->
+            <div class="main-menu">
+              <!-- LOGO -->
+              <div class="logoPageName">
+                <img src="./img/logo.svg" alt="Logo Google">
+                <span class="page-title"> Privacy e termini </span>
+              </div>
+              <!-- MAIN MENU LINKS -->
+              <ul class="menu-inline-1">
+                <li>Introduzione</li>
+                <li>Norme sulla privacy</li>
+                <li>Termini di servizio</li>
+                <li>Tecnologie</li>
+                <li>Domande frequenti</li>
+              </ul>
+            </div>
+            <!-- /MAIN MENU ********************** -->
+
+      </div>
+
+
+
+      <div class="content">
+        <p>IO SONO CONTENT</p>
+        <!-- PHP FAQ FROM DB -->
+        <?php
+
+          foreach($faq as $qa){
+            foreach($qa as $key => $value){
+              if($key === 'question'){
+                echo "<b>" . $value . "</b> <br> <br>";
+              }else{
+                echo "<p>" . $value . "</p> <br> <br>";
+              }
+            }
           }
-        }
-      }
 
-     ?>
-      <!-- /PHP FAQ FROM DB -->
+         ?>
+          <!-- /PHP FAQ FROM DB -->
+      </div>
+
+      </div>
 
   </body>
 </html>

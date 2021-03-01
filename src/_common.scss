@@ -3,10 +3,6 @@
   max-width: 1400px;
   min-width: 1139px;
   margin: 0 auto;
-  @media screen and (max-width: 1140px) {
-    width: 80%;
-    min-width: 961px;
-  }
 }
 
 
@@ -27,6 +23,29 @@
 // MENU INLINE LI STYLES SPECIFIC***********
 
 // Stile completo lista ul
+
+@mixin menu-inline-1{
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+
+  li{
+    display: inline-block;
+    margin-right: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $colorDarkGrey1;
+    transition: color 0.1s, text-shadow 0.5s, border 0.2s;
+    padding: 11px 0px;
+    border: 3px solid rgba(255,255,255,0);
+  }
+
+}
+
+
+
+
 @mixin menu-inline-ul-light-style-1{
    li{
      @include menu-inline-li-light-style-1;
@@ -78,6 +97,9 @@
   cursor: pointer;
 }
 
+
+
+
 @mixin hover-standard-style1{
   @include hover-standard-common;
   opacity: 70%;
@@ -85,6 +107,12 @@
 
 @mixin hover-standard-style2{
   @include hover-standard-common;
+}
+
+@mixin hover-standard-style3{
+  cursor: pointer;
+  color: $colorBlue1;
+  border-bottom-color: $colorBlue1;
 }
 
 // /HOVER ANIMATIONS ***********************************************************
