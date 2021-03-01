@@ -10,7 +10,6 @@ per ricreare la grafica della pagina. -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="dist/app.css"> -->
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <title>Google Faq</title>
@@ -150,17 +149,25 @@ per ricreare la grafica della pagina. -->
       <div class="content">
         <!-- PHP FAQ FROM DB -->
         <?php
-
+          $paragraph = [];
           foreach($faq as $qa){
             foreach($qa as $key => $value){
               if($key === 'question'){
-                echo "<b>" . $value . "</b> <br> <br>";
-              }else{
+                echo "<h2>" . $value . "</h2>";
+              }
+              if($key === 'answer'){
                 echo "<p>" . $value . "</p> <br> <br>";
+
+                // $paragraphs = explode('.', $value);
+                // echo "<p>";
+                // foreach($paragraphs as $phrase){
+                //   echo $phrase . "</p> </p>";
+                // }
+                // echo "</p>";
               }
             }
-          }
 
+          }
          ?>
           <!-- /PHP FAQ FROM DB -->
       </div>

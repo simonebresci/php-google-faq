@@ -10,6 +10,17 @@
 }
 
 
+h2{
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+p{
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
 
 .container{
   .content{
@@ -53,7 +64,6 @@
     display: block;
     color: $colorDarkGrey1;
     font-size: 22px;
-    // font-weight: bold;
     cursor: pointer;
     margin-bottom: 0px;
 
@@ -93,7 +103,7 @@
     }
 
     &-language{
-      @include menu-inline-2;
+      @include menu-inline-1;
 
       li{
         margin-right: 15px;
@@ -101,6 +111,10 @@
 
       select{
         width: 200px;
+      }
+
+      i{
+        color: rgb(76,185,249);
       }
     }
 

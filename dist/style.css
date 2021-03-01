@@ -5,6 +5,18 @@
   font-family: sans-serif;
 }
 
+h2 {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
 .container .content {
   max-width: 1400px;
   min-width: 1139px;
@@ -119,4 +131,7 @@
 }
 .footer-background .footer-language select {
   width: 200px;
+}
+.footer-background .footer-language i {
+  color: #4cb9f9;
 }
