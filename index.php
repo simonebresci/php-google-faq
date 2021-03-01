@@ -148,7 +148,6 @@ per ricreare la grafica della pagina. -->
 
 
       <div class="content">
-        <p>IO SONO CONTENT</p>
         <!-- PHP FAQ FROM DB -->
         <?php
 
@@ -165,8 +164,35 @@ per ricreare la grafica della pagina. -->
          ?>
           <!-- /PHP FAQ FROM DB -->
       </div>
+      <div class="footer-background">
 
+        <!-- Footer Bottom Content -->
+        <div class="footer">
+
+          <!-- Links -->
+          <ul class="footer-links">
+              <li>Google</li>
+              <li>Tutto su Google</li>
+              <li>Privacy</li>
+              <li>Termini</li>
+          </ul>
+          <!-- /Links -->
+
+          <ul class="footer-language">
+            <li><i class="fas fa-comment-alt"></i></li>
+            <li><select>
+                  <option>Italiano</option>
+                  <option>Inglese</option>
+                  <option>Francese</option>
+                </select>
+            </li>
+          </ul>
+
+        </div>
+        <!-- /Footer Bottom Content -->
       </div>
+
+    </div>
 
   </body>
 </html>

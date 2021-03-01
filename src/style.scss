@@ -14,7 +14,7 @@
 .container{
   .content{
     @include content-style;
-    margin-top: 95px;
+    margin-top: 205px;
   }
 }
 
@@ -70,45 +70,42 @@
 
 
 // FOOTER BOTTOM ***************************************************************
-// .footer-bottom{
-//   @include content-style;
-//   height: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//
-//   &-logo{
-//     display: inline-block;
-//
-//     img{
-//       width: 75px;
-//       vertical-align: middle;
-//       margin-right: 45px;
-//     }
-//   }
-//
-//   &-copyright{
-//     font-size: 12px;
-//     color: grey;
-//   }
-//
-//   &-links{
-//     li{
-//       @include  menu-inline-li-light-style-1;
-//       font-size: 12px;
-//
-//       .bullet{
-//         color: grey;
-//         font-weight: bold;
-//         margin-right: 5px;
-//       }
-//     }
-//
-//     li:hover{
-//       @include hover-standard-style1;
-//     }
-//   }
-// }
+.footer-background{
+  background-color: $colorLightGrey1;
+  .footer{
+    @include content-style;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-links{
+
+      li{
+        @include  menu-inline-li-grey-style-1;
+        font-size: 12px;
+
+      }
+
+      li:hover{
+        @include hover-standard-style1;
+      }
+    }
+
+    &-language{
+      @include menu-inline-2;
+
+      li{
+        margin-right: 15px;
+      }
+
+      select{
+        width: 200px;
+      }
+    }
+
+  }
+}
 
 
 // /FOOTER BOTTOM **************************************************************

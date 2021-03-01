@@ -8,8 +8,9 @@
 .container .content {
   max-width: 1400px;
   min-width: 1139px;
+  width: 70%;
   margin: 0 auto;
-  margin-top: 95px;
+  margin-top: 205px;
 }
 
 /* MENU INLINE STILE 1 ***********************/
@@ -70,3 +71,52 @@
 }
 
 /* /MAIN TOP *******************************************************************/
+.footer-background {
+  background-color: whitesmoke;
+}
+.footer-background .footer {
+  max-width: 1400px;
+  min-width: 1139px;
+  width: 70%;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-background .footer-links li {
+  display: inline-block;
+  cursor: pointer;
+  color: #5d5d5d;
+  margin-right: 15px;
+  font-size: 12px;
+}
+.footer-background .footer-links li:hover {
+  transition: opacity 0.4s, text-shadow 0.2s;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 70%;
+}
+.footer-background .footer-language {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-background .footer-language li {
+  display: inline-block;
+  margin-right: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5d5d5d;
+  transition: color 0.1s, text-shadow 0.5s, border 0.2s;
+  padding: 11px 0px;
+  border: 3px solid rgba(255, 255, 255, 0);
+}
+.footer-background .footer-language li {
+  margin-right: 15px;
+}
+.footer-background .footer-language select {
+  width: 200px;
+}
