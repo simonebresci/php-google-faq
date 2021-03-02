@@ -151,23 +151,12 @@ per ricreare la grafica della pagina. -->
         <?php
           $paragraph = [];
           foreach($faq as $qa){
-            foreach($qa as $key => $value){
-              if($key === 'question'){
-                echo "<h2>" . $value . "</h2>";
-              }
-              if($key === 'answer'){
-                echo "<p>" . $value . "</p> <br> <br>";
+            echo "<h2>" . $qa['question'] . "</h2>";
+            echo "<p>" . $qa['answer'] . "</p> <br> <br>";
 
-                // $paragraphs = explode('.', $value);
-                // echo "<p>";
-                // foreach($paragraphs as $phrase){
-                //   echo $phrase . "</p> </p>";
-                // }
-                // echo "</p>";
-              }
             }
 
-          }
+          
          ?>
           <!-- /PHP FAQ FROM DB -->
       </div>
